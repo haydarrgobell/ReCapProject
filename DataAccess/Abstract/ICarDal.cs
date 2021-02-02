@@ -8,12 +8,15 @@ namespace DataAccess.Abstract
     public interface ICarDal // --> Dal = Data Access Layer
     {
         List<Car> GetAll();
-
         void Add(Car car);
         void Update(Car car);
         void Delete(Car car);
+        List<Car> GetById(int carId);
 
-        List<Car> GetByColorId(int colorId);
-        List<Car> GetByBrandId(int brandId);
+        List<Car> GetByColor(Color color);
+
+        List<Car> GetByBrand(Brand brand);
+
+
     }
 }

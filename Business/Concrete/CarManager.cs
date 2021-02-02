@@ -22,6 +22,23 @@ namespace Business.Concrete
             return _carDal.GetAll();
         }
 
+        public List<Car> GetByBrand(Brand brand)
+        {
+            return _carDal.GetByBrand(brand);
+        }
 
+        public List<Car> GetByColor(Color color)
+        {
+            return _carDal.GetByColor(color);
+        }
+        public List<Car> GetById(int carId)
+        {
+            return _carDal.GetById(carId);
+        }
+
+        public IEnumerable<Car> GetByBrand(object brand)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
